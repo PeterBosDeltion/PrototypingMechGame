@@ -8,6 +8,8 @@ public class Player : MonoBehaviour {
     public float moveSpeed;
     public float rotateSpeed;
     public float jumpForce;
+    public float jumpCoolDown;
+    public bool canJump;
 
     public bool usingController;
     private Rigidbody rb;
@@ -22,7 +24,8 @@ public class Player : MonoBehaviour {
     Camera myCam;
     // Use this for initialization
     void Start () {
-            rb = GetComponent<Rigidbody>();
+        canJump = true;
+        rb = GetComponent<Rigidbody>();
         myCam = GetComponentInChildren<Camera>();
 	}
 	
@@ -33,7 +36,6 @@ public class Player : MonoBehaviour {
     }
 
     void FixedUpdate () {
-
         Move();
         Jump();
     }
@@ -50,7 +52,7 @@ public class Player : MonoBehaviour {
                 transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
 
                 float rotY = Input.GetAxis("RightJoyHorizontal");
-           
+
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
             }
@@ -63,13 +65,12 @@ public class Player : MonoBehaviour {
 
                 float rotY = Input.GetAxis("QE");
 
-
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
             }
 
            
         }
-        else if (playerNumber == 2)
+        if (playerNumber == 2)
         {
             if (usingController)
             {
@@ -80,7 +81,6 @@ public class Player : MonoBehaviour {
                 transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
 
                 float rotY = Input.GetAxis("RightJoyHorizontalPtwo");
-
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
             }
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour {
                 transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
 
                 float rotY = Input.GetAxis("79");
-
+                
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
             }
@@ -104,21 +104,31 @@ public class Player : MonoBehaviour {
 
     public void Jump()
     {
-        if(playerNumber == 1)
+        if(playerNumber == 1 && canJump)
         {
-            if (Input.GetButtonDown("Abutton") || Input.GetButtonDown("Space"))
+            if (Input.GetButtonDown("Abutton") || Input.GetButtonDown("Space") && !usingController)
             {
-                this.rb.AddForce(Vector3.up * jumpForce * 2 * Time.deltaTime);
+                rb.velocity = Vector3.up * jumpForce * Time.deltaTime;
+                //this.rb.AddForce(Vector3.up * jumpForce * 2 * Time.deltaTime);
+                StartCoroutine(JumpCooldown());
+                canJump = false;
             }
         }
-        else if (playerNumber == 2)
+        if (playerNumber == 2 && canJump)
         {
-            if (Input.GetButtonDown("AbuttonPtwo") || Input.GetButtonDown("NumEnter"))
+            if (Input.GetButtonDown("AbuttonPtwo") || Input.GetButtonDown("NumEnter") && !usingController)
             {
-                this.rb.AddForce(Vector3.up * jumpForce * 2 * Time.deltaTime);
+                rb.velocity = Vector3.up * jumpForce * Time.deltaTime;
+                //this.rb.AddForce(Vector3.up * jumpForce * 2 * Time.deltaTime);
+                StartCoroutine(JumpCooldown());
+                canJump = false;
             }
         }
     }
 
-   
+   IEnumerator JumpCooldown()
+    {
+        yield return new WaitForSeconds(jumpCoolDown);
+        canJump = true;
+    }
 }
