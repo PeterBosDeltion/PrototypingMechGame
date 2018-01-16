@@ -13,6 +13,8 @@ public class Player : MonoBehaviour {
     public float jumpCoolDown;
     public bool canJump;
 
+    private Quaternion armsStartRot;
+
     [Header("Track Position Variables")]
     public bool usingTracking;
     public GameObject dummy;
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour {
     Camera myCam;
     // Use this for initialization
     void Start () {
+        armsStartRot = armsParent.transform.localRotation;
         if (!hasDummy && usingTracking)
         {
             dummyClone = Instantiate(dummy, Vector3.zero, Quaternion.identity);
@@ -46,7 +49,10 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
-        
+        if (playerNumber == 1 && Input.GetButton("RightJoyClick"))
+        {
+            armsParent.transform.localRotation = armsStartRot;
+        }
     }
 
     void FixedUpdate () {
