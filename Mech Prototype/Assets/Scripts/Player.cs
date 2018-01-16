@@ -7,9 +7,16 @@ public class Player : MonoBehaviour {
     public int playerNumber;
     public float moveSpeed;
     public float rotateSpeed;
+    public float rotationClampMax;
+    public float rotationClampMin;
     public float jumpForce;
     public float jumpCoolDown;
     public bool canJump;
+
+    [Header("Track Position Variables")]
+    public GameObject dummy;
+    private GameObject dummyClone;
+    public bool hasDummy;
 
     public bool usingController;
     private Rigidbody rb;
@@ -24,6 +31,12 @@ public class Player : MonoBehaviour {
     Camera myCam;
     // Use this for initialization
     void Start () {
+        if (!hasDummy)
+        {
+            dummyClone = Instantiate(dummy, Vector3.zero, Quaternion.identity);
+            hasDummy = true;
+
+        }
         canJump = true;
         rb = GetComponent<Rigidbody>();
         myCam = GetComponentInChildren<Camera>();
@@ -48,24 +61,79 @@ public class Player : MonoBehaviour {
             {
                 float z = Input.GetAxis("LeftJoyVertical");
                 float x = Input.GetAxis("LeftJoyHorizontal");
-                transform.position += transform.forward * -z * moveSpeed * Time.deltaTime ;
-                transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
+
+                Vector3 movement = new Vector3(x, 0, -z);
+
+                movement *= moveSpeed * Time.deltaTime;
+                transform.Translate(movement);
+
+                if(movement != Vector3.zero)
+                {
+                    myLegs.transform.rotation = Quaternion.LookRotation(movement);
+                }
+               
+                
+                //transform.position += transform.forward * -z * moveSpeed * Time.deltaTime ;
+                //transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
 
                 float rotY = Input.GetAxis("RightJoyHorizontal");
+                if(rotY != 0)
+                {
+                    Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
+
+                    
+
+                    dummyClone.transform.position = forwardPos;
+                }
+
+                Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
+                lookPos.y = 0;
+                Quaternion rotation = Quaternion.LookRotation(lookPos);
+                myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
 
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
+
+                float rotX = Input.GetAxis("RightJoyVertical");
+                armsParent.transform.Rotate(rotX * rotateSpeed * Time.deltaTime,transform.rotation.y , transform.rotation.z);
+           
+
+
             }
             else
             {
                 float z = Input.GetAxis("Vertical");
                 float x = Input.GetAxis("Horizontal");
-                transform.position += transform.forward * z * moveSpeed * Time.deltaTime;
-                transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
+                Vector3 movement = new Vector3(x, 0, -z);
+
+                movement *= moveSpeed * Time.deltaTime;
+                transform.Translate(movement);
+
+                if (movement != Vector3.zero)
+                {
+                    myLegs.transform.rotation = Quaternion.LookRotation(movement);
+                }
 
                 float rotY = Input.GetAxis("QE");
+                if (rotY != 0)
+                {
+                    Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
+
+
+
+                    dummyClone.transform.position = forwardPos;
+                }
+
+                Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
+                lookPos.y = 0;
+                Quaternion rotation = Quaternion.LookRotation(lookPos);
+                myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
+
+                //float rotX = Input.GetAxis("RightJoyVertical"); ASSIGN THIS TO SOMETHING FOR KEYBOARDS
+                //armsParent.transform.Rotate(rotX * rotateSpeed * Time.deltaTime, transform.rotation.y, transform.rotation.z);
+
             }
 
            
@@ -77,25 +145,69 @@ public class Player : MonoBehaviour {
                 float z = Input.GetAxis("LeftJoyVerticalPtwo");
                 float x = Input.GetAxis("LeftJoyHorizontalPtwo");
 
-                transform.position += transform.forward * -z * moveSpeed * Time.deltaTime;
-                transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
+                Vector3 movement = new Vector3(x, 0, -z);
+
+                movement *= moveSpeed * Time.deltaTime;
+                transform.Translate(movement);
+
+                if (movement != Vector3.zero)
+                {
+                    myLegs.transform.rotation = Quaternion.LookRotation(movement);
+                }
 
                 float rotY = Input.GetAxis("RightJoyHorizontalPtwo");
+                if (rotY != 0)
+                {
+                    Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
+
+
+
+                    dummyClone.transform.position = forwardPos;
+                }
+
+                Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
+                lookPos.y = 0;
+                Quaternion rotation = Quaternion.LookRotation(lookPos);
+                myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
+                float rotX = Input.GetAxis("RightJoyVerticalPtwo");
+                armsParent.transform.Rotate(rotX * rotateSpeed * Time.deltaTime, transform.rotation.y, transform.rotation.z);
             }
             else
             {
                 float z = Input.GetAxis("VerticalArrows");
                 float x = Input.GetAxis("HorizontalArrows");
 
-                transform.position += transform.forward * z * moveSpeed * Time.deltaTime;
-                transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
+                Vector3 movement = new Vector3(x, 0, -z);
+
+                movement *= moveSpeed * Time.deltaTime;
+                transform.Translate(movement);
+
+                if (movement != Vector3.zero)
+                {
+                    myLegs.transform.rotation = Quaternion.LookRotation(movement);
+                }
 
                 float rotY = Input.GetAxis("79");
-                
+                if (rotY != 0)
+                {
+                    Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
+
+
+
+                    dummyClone.transform.position = forwardPos;
+                }
+
+                Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
+                lookPos.y = 0;
+                Quaternion rotation = Quaternion.LookRotation(lookPos);
+                myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
+                //float rotX = Input.GetAxis("RightJoyVertical"); <---- ASSIGN THIS TO SOMETHING FOR KEYBOARDS
+                //armsParent.transform.Rotate(rotX * rotateSpeed * Time.deltaTime, transform.rotation.y, transform.rotation.z);
             }
           
 
