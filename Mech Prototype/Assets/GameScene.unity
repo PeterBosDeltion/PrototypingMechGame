@@ -1074,6 +1074,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1736735943917036, guid: c17a3ef5705537d47ac02e89ec17157c,
         type: 2}
+    - target: {fileID: 114231817084247508, guid: e14738ef98003f34ebcb2115c1accc19,
+        type: 2}
+      propertyPath: usingTracking
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e14738ef98003f34ebcb2115c1accc19, type: 2}
   m_IsPrefabParent: 0

@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
     public bool canJump;
 
     [Header("Track Position Variables")]
+    public bool usingTracking;
     public GameObject dummy;
     private GameObject dummyClone;
     public bool hasDummy;
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour {
     Camera myCam;
     // Use this for initialization
     void Start () {
-        if (!hasDummy)
+        if (!hasDummy && usingTracking)
         {
             dummyClone = Instantiate(dummy, Vector3.zero, Quaternion.identity);
             hasDummy = true;
@@ -77,7 +78,7 @@ public class Player : MonoBehaviour {
                 //transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
 
                 float rotY = Input.GetAxis("RightJoyHorizontal");
-                if(rotY != 0)
+                if(rotY != 0 && usingTracking)
                 {
                     Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
 
@@ -86,10 +87,13 @@ public class Player : MonoBehaviour {
                     dummyClone.transform.position = forwardPos;
                 }
 
-                Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
-                lookPos.y = 0;
-                Quaternion rotation = Quaternion.LookRotation(lookPos);
-                myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+                if (usingTracking)
+                {
+                    Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
+                    lookPos.y = 0;
+                    Quaternion rotation = Quaternion.LookRotation(lookPos);
+                    myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+                }
 
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
@@ -115,7 +119,7 @@ public class Player : MonoBehaviour {
                 }
 
                 float rotY = Input.GetAxis("QE");
-                if (rotY != 0)
+                if (rotY != 0 && usingTracking)
                 {
                     Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
 
@@ -124,10 +128,13 @@ public class Player : MonoBehaviour {
                     dummyClone.transform.position = forwardPos;
                 }
 
-                Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
-                lookPos.y = 0;
-                Quaternion rotation = Quaternion.LookRotation(lookPos);
-                myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+                if (usingTracking)
+                {
+                    Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
+                    lookPos.y = 0;
+                    Quaternion rotation = Quaternion.LookRotation(lookPos);
+                    myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+                }
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
 
@@ -156,7 +163,7 @@ public class Player : MonoBehaviour {
                 }
 
                 float rotY = Input.GetAxis("RightJoyHorizontalPtwo");
-                if (rotY != 0)
+                if (rotY != 0 && usingTracking)
                 {
                     Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
 
@@ -164,11 +171,13 @@ public class Player : MonoBehaviour {
 
                     dummyClone.transform.position = forwardPos;
                 }
-
-                Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
-                lookPos.y = 0;
-                Quaternion rotation = Quaternion.LookRotation(lookPos);
-                myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+                if (usingTracking)
+                {
+                    Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
+                    lookPos.y = 0;
+                    Quaternion rotation = Quaternion.LookRotation(lookPos);
+                    myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+                }
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
                 float rotX = Input.GetAxis("RightJoyVerticalPtwo");
@@ -190,7 +199,7 @@ public class Player : MonoBehaviour {
                 }
 
                 float rotY = Input.GetAxis("79");
-                if (rotY != 0)
+                if (rotY != 0 && usingTracking)
                 {
                     Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
 
@@ -199,10 +208,13 @@ public class Player : MonoBehaviour {
                     dummyClone.transform.position = forwardPos;
                 }
 
-                Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
-                lookPos.y = 0;
-                Quaternion rotation = Quaternion.LookRotation(lookPos);
-                myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+                if (usingTracking)
+                {
+                    Vector3 lookPos = dummyClone.transform.position - myBody.transform.position;
+                    lookPos.y = 0;
+                    Quaternion rotation = Quaternion.LookRotation(lookPos);
+                    myBody.transform.rotation = Quaternion.Slerp(myBody.transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+                }
 
 
                 myBody.transform.Rotate(transform.rotation.x, rotY * rotateSpeed * Time.deltaTime, transform.rotation.z);
