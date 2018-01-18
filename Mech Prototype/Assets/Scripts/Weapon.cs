@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu]
-public class Weapon : ScriptableObject {
+public abstract class Weapon : MonoBehaviour {
     public GameObject armPrefab;
     public enum weaponTypes
     {
@@ -18,10 +17,8 @@ public class Weapon : ScriptableObject {
     public float projectileSpeed;
     public float cooldown;
 
-    
-   public virtual void Use(Vector3 armPos)
-    {
 
-    }
+    public abstract void Use(Vector3 armPos);
+   
 	
 }

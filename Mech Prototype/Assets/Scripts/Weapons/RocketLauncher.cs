@@ -14,14 +14,15 @@ public class RocketLauncher : Weapon {
 	void Update () {
 		
 	}
-
+    
     public override void Use(Vector3 armPos)
     {
 
-        Debug.Log("You used me you filthy slut");
+        Debug.Log("used");
         GameObject g = Instantiate(base.projectileTypes[0], armPos, Quaternion.identity);
+        g.transform.rotation = transform.rotation;
         rb = g.GetComponent<Rigidbody>();
-        rb.AddForce(g.transform.forward * base.projectileSpeed * Time.deltaTime);
+        rb.AddForce(g.transform.forward * projectileSpeed * Time.deltaTime);
         Destroy(g, 2.0F);
     }
 

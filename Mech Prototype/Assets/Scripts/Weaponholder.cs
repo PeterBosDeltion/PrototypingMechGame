@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Weaponholder : MonoBehaviour {
-    public Weapon weapon;
-    private GameObject weaponObject;
+    public GameObject weaponObject;
+    private Weapon weapon;
     private Player player;
 	// Use this for initialization
 	void Start () {
@@ -23,8 +23,9 @@ public class Weaponholder : MonoBehaviour {
 
     public void Setup()
     {
-        weaponObject = Instantiate(weapon.armPrefab, transform.position, Quaternion.identity);
+        weaponObject = Instantiate(weaponObject, transform.position, Quaternion.identity);
         weaponObject.transform.SetParent(transform);
+        weapon = weaponObject.GetComponent<Weapon>();
     }
 
   

@@ -335,6 +335,16 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1213507709}
+    - target: {fileID: 114231817084247508, guid: e14738ef98003f34ebcb2115c1accc19,
+        type: 2}
+      propertyPath: playerNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114231817084247508, guid: e14738ef98003f34ebcb2115c1accc19,
+        type: 2}
+      propertyPath: jumpCoolDown
+      value: 2.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e14738ef98003f34ebcb2115c1accc19, type: 2}
   m_IsPrefabParent: 0
@@ -359,7 +369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00715d600027ba7429af124bbf57e7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 68952642e7fc2d041b04bf94c9a24d26, type: 2}
+  weaponObject: {fileID: 1111057485516436, guid: 28281b49368817e4fae03165355678b3,
+    type: 2}
 --- !u!114 &300371263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00715d600027ba7429af124bbf57e7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 68952642e7fc2d041b04bf94c9a24d26, type: 2}
+  weaponObject: {fileID: 1111057485516436, guid: 28281b49368817e4fae03165355678b3,
+    type: 2}
 --- !u!1 &614622778
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,9 +615,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 0
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &851351398
@@ -944,6 +956,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
