@@ -32,8 +32,11 @@ public class Player : MonoBehaviour {
     public GameObject myLegs;
     Vector3 direction;
     Camera myCam;
+
+    private Quaternion lookPos;
     // Use this for initialization
     void Start () {
+        
         armsStartRot = armsParent.transform.localRotation;
         if (!hasDummy && usingTracking)
         {
@@ -53,11 +56,17 @@ public class Player : MonoBehaviour {
         {
             armsParent.transform.localRotation = armsStartRot;
         }
+        else if (playerNumber == 2 && Input.GetButton("RightJoyClickPtwo"))
+        {
+            armsParent.transform.localRotation = armsStartRot;
+        }
     }
 
     void FixedUpdate () {
         Move();
         Jump();
+
+        
     }
 
     public void Move()
@@ -84,7 +93,15 @@ public class Player : MonoBehaviour {
                 //transform.Rotate(transform.rotation.x, x * rotateSpeed * Time.deltaTime, transform.rotation.z);
 
                 float rotY = Input.GetAxis("RightJoyHorizontal");
-                if(rotY != 0 && usingTracking)
+                if(rotY != 0)
+                {
+                    lookPos = myBody.transform.rotation;
+                }
+                else if (myBody.transform.rotation != lookPos && rotY ==0)
+                {
+                    myBody.transform.rotation = lookPos;
+                }
+                if (rotY != 0 && usingTracking)
                 {
                     Vector3 forwardPos = myBody.transform.position + myBody.transform.forward;
 

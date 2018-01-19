@@ -9,46 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1111057485516436}
+  m_RootGameObject: {fileID: 1130105388695708}
   m_IsPrefabParent: 1
---- !u!1 &1111057485516436
+--- !u!1 &1130105388695708
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4520119712801504}
-  - component: {fileID: 33229851826181604}
-  - component: {fileID: 65407976491787396}
-  - component: {fileID: 23735317286856734}
-  - component: {fileID: 114637912847758254}
+  - component: {fileID: 4505073096799844}
+  - component: {fileID: 33825648256712324}
+  - component: {fileID: 23749206297085258}
+  - component: {fileID: 95888127439544718}
+  - component: {fileID: 114617113917600920}
+  - component: {fileID: 114013762982465720}
   m_Layer: 0
-  m_Name: Rocket Launcher
+  m_Name: RailGunLeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4520119712801504
+--- !u!4 &4505073096799844
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1111057485516436}
+  m_GameObject: {fileID: 1130105388695708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.662}
+  m_LocalPosition: {x: 25.30054, y: 10.78, z: -26.889671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23735317286856734
+--- !u!23 &23749206297085258
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1111057485516436}
+  m_GameObject: {fileID: 1130105388695708}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8dec55245dee03342a3411cdf679ae5a, type: 2}
+  - {fileID: 2100000, guid: de392251a937854489ea2a2febfa9609, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -65,7 +66,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
@@ -77,40 +78,56 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33229851826181604
+--- !u!33 &33825648256712324
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1111057485516436}
-  m_Mesh: {fileID: 4300000, guid: 7dd649e97a0ec6f46aa9e41e2c7d2242, type: 3}
---- !u!65 &65407976491787396
-BoxCollider:
+  m_GameObject: {fileID: 1130105388695708}
+  m_Mesh: {fileID: 4300000, guid: de392251a937854489ea2a2febfa9609, type: 3}
+--- !u!95 &95888127439544718
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1111057485516436}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114637912847758254
+  m_GameObject: {fileID: 1130105388695708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: de392251a937854489ea2a2febfa9609, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114013762982465720
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1111057485516436}
+  m_GameObject: {fileID: 1130105388695708}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b875c8a8e3b4b20499a5dc0c879c95fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armPrefab: {fileID: 1111057485516436}
+  armPrefab: {fileID: 1130105388695708}
   typeWeapons: 
   projectileTypes:
   - {fileID: 1530412109076270, guid: 81ab5166a10faea498a539b008b0b92e, type: 2}
   damage: 30
   projectileSpeed: 128000
-  cooldown: 4
+  cooldown: 5
+--- !u!114 &114617113917600920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1130105388695708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d74f9c2f53291469b191bada1956a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

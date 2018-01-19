@@ -20,9 +20,9 @@ public class RocketLauncher : Weapon {
 
         Debug.Log("used");
         GameObject g = Instantiate(base.projectileTypes[0], armPos, Quaternion.identity);
-        g.transform.rotation = transform.rotation;
+        g.transform.rotation = GetComponentInParent<Player>().armsParent.transform.rotation;
         rb = g.GetComponent<Rigidbody>();
-        rb.AddForce(g.transform.forward * projectileSpeed * Time.deltaTime);
+        rb.AddForce(GetComponentInParent<Player>().armsParent.transform.forward * projectileSpeed * Time.deltaTime);
         Destroy(g, 2.0F);
     }
 
