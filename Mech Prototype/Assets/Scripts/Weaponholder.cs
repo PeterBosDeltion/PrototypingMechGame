@@ -4,21 +4,46 @@ using UnityEngine;
 
 public class Weaponholder : MonoBehaviour {
     public GameObject weaponObject;
+    public bool onLeftArm;
     private Weapon weapon;
     private Player player;
 	// Use this for initialization
 	void Start () {
         player = GetComponentInParent<Player>();
         Setup();
-	}
+        if (onLeftArm)
+        {
+            weapon.myCooler = player.leftArmCooler;
+            weapon.myCooler.color = weaponObject.GetComponent<Renderer>().material.color;
+        }
+        else
+        {
+            weapon.myCooler = player.rightArmCooler;
+            weapon.myCooler.color = weaponObject.GetComponent<Renderer>().material.color;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if(player.playerNumber == 1 && Input.GetButtonDown("Abutton"))
+        
+        float leftOne = Input.GetAxis("LeftTrigger");
+        float leftTwo = Input.GetAxis("LeftTriggerPtwo");
+
+        float rightOne = Input.GetAxis("RightTrigger");
+        float rightTwo = Input.GetAxis("RightTriggerPtwo");
+        if (player.playerNumber == 1 && leftOne > 0 && onLeftArm)
         {
             weapon.Use(transform.position);
         }
-        else if (player.playerNumber == 2 && Input.GetButtonDown("AbuttonPtwo"))
+        else if (player.playerNumber == 1 && rightOne > 0 && !onLeftArm)
+        {
+            weapon.Use(transform.position);
+        }
+        else if (player.playerNumber == 2 && leftTwo > 0 && onLeftArm)
+        {
+            weapon.Use(transform.position);
+        }
+        else if (player.playerNumber == 2 && rightTwo > 0 && !onLeftArm)
         {
             weapon.Use(transform.position);
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     [Header("Basic Variables")]
@@ -34,6 +35,9 @@ public class Player : MonoBehaviour {
     Camera myCam;
 
     private Quaternion lookPos;
+
+    public Image leftArmCooler;
+    public Image rightArmCooler;
     // Use this for initialization
     void Start () {
         

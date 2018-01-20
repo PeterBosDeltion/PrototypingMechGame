@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23749206297085258}
   - component: {fileID: 95888127439544718}
   - component: {fileID: 114617113917600920}
-  - component: {fileID: 114013762982465720}
   m_Layer: 0
   m_Name: RailGunLeftArm
   m_TagString: Untagged
@@ -31,6 +30,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1872830875320846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4219804724552886}
+  m_Layer: 0
+  m_Name: BulletPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4219804724552886
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872830875320846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.95, y: -8.78, z: 0.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4505073096799844}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4505073096799844
 Transform:
   m_ObjectHideFlags: 1
@@ -38,9 +65,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1130105388695708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.30054, y: 10.78, z: -26.889671}
+  m_LocalPosition: {x: 12.687039, y: 11.24, z: 28.172342}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4219804724552886}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,24 +130,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114013762982465720
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1130105388695708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b875c8a8e3b4b20499a5dc0c879c95fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  armPrefab: {fileID: 1130105388695708}
-  typeWeapons: 
-  projectileTypes:
-  - {fileID: 1530412109076270, guid: 81ab5166a10faea498a539b008b0b92e, type: 2}
-  damage: 30
-  projectileSpeed: 128000
-  cooldown: 5
 --- !u!114 &114617113917600920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,3 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d74f9c2f53291469b191bada1956a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armPrefab: {fileID: 1008476084155460, guid: 4b9099dcc974b0a4b87fce7f14965d7b, type: 2}
+  bulletSpawnPos: {fileID: 1872830875320846}
+  typeWeapons: 
+  projectileTypes:
+  - {fileID: 1530412109076270, guid: 81ab5166a10faea498a539b008b0b92e, type: 2}
+  damage: 250
+  projectileSpeed: 260000
+  cooldown: 15
+  onCooldown: 0
