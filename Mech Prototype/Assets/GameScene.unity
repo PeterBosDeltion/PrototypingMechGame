@@ -381,6 +381,7 @@ MonoBehaviour:
   weaponObject: {fileID: 1111057485516436, guid: 28281b49368817e4fae03165355678b3,
     type: 2}
   onLeftArm: 0
+  player: {fileID: 0}
 --- !u!114 &300371263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +396,7 @@ MonoBehaviour:
   weaponObject: {fileID: 1111057485516436, guid: 28281b49368817e4fae03165355678b3,
     type: 2}
   onLeftArm: 0
+  player: {fileID: 0}
 --- !u!4 &312211113 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4189296012283330, guid: 6d00ddcf41273ef4ea7bc155de258c68,
@@ -453,6 +455,10 @@ Prefab:
       propertyPath: playerNumber
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1071534278146534, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
   m_IsPrefabParent: 0
@@ -500,6 +506,16 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1213507709}
+    - target: {fileID: 114977074983384776, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+        type: 2}
+      propertyPath: weaponObject
+      value: 
+      objectReference: {fileID: 1278127347915576, guid: a6044d6fb3aa8d94e9cce95ea923cdf5,
+        type: 2}
+    - target: {fileID: 1071534278146534, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
   m_IsPrefabParent: 0
@@ -705,6 +721,7 @@ MonoBehaviour:
   weaponObject: {fileID: 1111057485516436, guid: 28281b49368817e4fae03165355678b3,
     type: 2}
   onLeftArm: 0
+  player: {fileID: 0}
 --- !u!114 &735116110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,6 +736,7 @@ MonoBehaviour:
   weaponObject: {fileID: 1111057485516436, guid: 28281b49368817e4fae03165355678b3,
     type: 2}
   onLeftArm: 0
+  player: {fileID: 0}
 --- !u!1 &831502579
 GameObject:
   m_ObjectHideFlags: 0

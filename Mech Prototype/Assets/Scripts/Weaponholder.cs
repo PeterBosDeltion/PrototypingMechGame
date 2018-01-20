@@ -6,7 +6,7 @@ public class Weaponholder : MonoBehaviour {
     public GameObject weaponObject;
     public bool onLeftArm;
     private Weapon weapon;
-    private Player player;
+    public Player player;
 	// Use this for initialization
 	void Start () {
         player = GetComponentInParent<Player>();

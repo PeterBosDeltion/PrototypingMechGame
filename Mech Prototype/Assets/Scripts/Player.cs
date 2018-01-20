@@ -14,6 +14,8 @@ public class Player : MonoBehaviour {
     public float jumpCoolDown;
     public bool canJump;
 
+    public float hp;
+
     private Quaternion armsStartRot;
 
     [Header("Track Position Variables")]
