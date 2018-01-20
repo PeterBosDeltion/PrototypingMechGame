@@ -12,7 +12,7 @@ public class Flamethrower : Weapon {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        base.CoolerUpdate();
 	}
 
     public override void Use(Vector3 armPos)
@@ -21,6 +21,10 @@ public class Flamethrower : Weapon {
         {
             parts.Play();
             StartCoroutine(Cooldown());
+        }
+        else
+        {
+            parts.Stop();
         }
     }
 
