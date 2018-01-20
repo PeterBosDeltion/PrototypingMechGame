@@ -10,9 +10,7 @@ public class Player : MonoBehaviour {
     public float rotateSpeed;
     public float rotationClampMax;
     public float rotationClampMin;
-    public float jumpForce;
-    public float jumpCoolDown;
-    public bool canJump;
+ 
 
     public float hp;
 
@@ -50,7 +48,6 @@ public class Player : MonoBehaviour {
             hasDummy = true;
 
         }
-        canJump = true;
         rb = GetComponent<Rigidbody>();
         myCam = GetComponentInChildren<Camera>();
 	}
@@ -70,7 +67,6 @@ public class Player : MonoBehaviour {
 
     void FixedUpdate () {
         Move();
-        Jump();
 
         
     }
@@ -255,33 +251,5 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void Jump()
-    {
-        if(playerNumber == 1 && canJump)
-        {
-            if (Input.GetButtonDown("Abutton") || Input.GetButtonDown("Space") && !usingController)
-            {
-                rb.velocity = Vector3.up * jumpForce * Time.deltaTime;
-                //this.rb.AddForce(Vector3.up * jumpForce * 2 * Time.deltaTime);
-                StartCoroutine(JumpCooldown());
-                canJump = false;
-            }
-        }
-        if (playerNumber == 2 && canJump)
-        {
-            if (Input.GetButtonDown("AbuttonPtwo") || Input.GetButtonDown("NumEnter") && !usingController)
-            {
-                rb.velocity = Vector3.up * jumpForce * Time.deltaTime;
-                //this.rb.AddForce(Vector3.up * jumpForce * 2 * Time.deltaTime);
-                StartCoroutine(JumpCooldown());
-                canJump = false;
-            }
-        }
-    }
-
-   IEnumerator JumpCooldown()
-    {
-        yield return new WaitForSeconds(jumpCoolDown);
-        canJump = true;
-    }
+   
 }

@@ -520,9 +520,7 @@ MonoBehaviour:
   rotateSpeed: 200
   rotationClampMax: 90
   rotationClampMin: -90
-  jumpForce: 400
-  jumpCoolDown: 2.3
-  canJump: 0
+  hp: 0
   usingTracking: 1
   dummy: {fileID: 1736735943917036, guid: c17a3ef5705537d47ac02e89ec17157c, type: 2}
   hasDummy: 0
@@ -532,6 +530,8 @@ MonoBehaviour:
   myLeftArm: {fileID: 0}
   myRightArm: {fileID: 0}
   myLegs: {fileID: 1836575887018548}
+  leftArmCooler: {fileID: 0}
+  rightArmCooler: {fileID: 0}
 --- !u!114 &114355153533839284
 MonoBehaviour:
   m_ObjectHideFlags: 1
