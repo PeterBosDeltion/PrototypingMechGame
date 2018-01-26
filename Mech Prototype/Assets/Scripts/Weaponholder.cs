@@ -16,7 +16,7 @@ public class Weaponholder : MonoBehaviour {
             weapon.myCooler = player.leftArmCooler;
             weapon.myCooler.color = weaponObject.GetComponent<Renderer>().material.color;
         }
-        else
+        else if(!onLeftArm)
         {
             weapon.myCooler = player.rightArmCooler;
             weapon.myCooler.color = weaponObject.GetComponent<Renderer>().material.color;

@@ -449,6 +449,17 @@ Prefab:
       value: 
       objectReference: {fileID: 1278127347915576, guid: a6044d6fb3aa8d94e9cce95ea923cdf5,
         type: 2}
+    - target: {fileID: 114088316239224820, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+        type: 2}
+      propertyPath: weaponObject
+      value: 
+      objectReference: {fileID: 1037437924937108, guid: f57f94e640fe8aa4f9f46e0e3a78d8d4,
+        type: 2}
+    - target: {fileID: 54675037901993880, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+        type: 2}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
   m_IsPrefabParent: 0
@@ -646,6 +657,11 @@ Prefab:
         type: 2}
       propertyPath: hp
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 54675037901993880, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+        type: 2}
+      propertyPath: m_Mass
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
