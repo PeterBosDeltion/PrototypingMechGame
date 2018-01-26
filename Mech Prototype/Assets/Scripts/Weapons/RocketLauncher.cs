@@ -22,6 +22,8 @@ public class RocketLauncher : Weapon {
         {
             GameObject g = Instantiate(base.projectileTypes[0], bulletSpawnPos.transform.position, Quaternion.identity);
             g.transform.rotation = GetComponentInParent<Player>().armsParent.transform.rotation;
+            g.GetComponent<Projectile>().damage = damage;
+            g.GetComponent<Projectile>().myPlayerNumber = GetComponentInParent<Weaponholder>().player.playerNumber;
             rb = g.GetComponent<Rigidbody>();
             rb.AddForce(GetComponentInParent<Player>().armsParent.transform.forward * projectileSpeed * Time.deltaTime);
             Destroy(g, 2.0F);
