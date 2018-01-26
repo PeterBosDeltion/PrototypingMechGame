@@ -142,7 +142,9 @@ MonoBehaviour:
   typeWeapons: 
   projectileTypes:
   - {fileID: 1530412109076270, guid: 81ab5166a10faea498a539b008b0b92e, type: 2}
-  damage: 30
-  projectileSpeed: 128000
-  cooldown: 2
+  damage: 200
+  projectileSpeed: 60000
+  cooldown: 12
   onCooldown: 0
+  impairMovement: 0
+  amountImpaired: 0

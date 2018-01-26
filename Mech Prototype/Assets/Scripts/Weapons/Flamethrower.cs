@@ -8,6 +8,10 @@ public class Flamethrower : Weapon {
     // Use this for initialization
     void Start () {
         parts = GetComponentInChildren<ParticleSystem>();
+        if (impairMovement)
+        {
+            GetComponentInParent<Weaponholder>().player.moveSpeed -= amountImpaired;
+        }
 	}
 	
 	// Update is called once per frame

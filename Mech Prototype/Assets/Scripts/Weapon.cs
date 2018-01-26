@@ -21,6 +21,9 @@ public abstract class Weapon : MonoBehaviour {
     public float cooldown;
     public bool onCooldown;
 
+    public bool impairMovement;
+    public float amountImpaired;
+
 
     public abstract void Use(Vector3 armPos);
 

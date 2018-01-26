@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1458767942517912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.75, y: -4.09, z: 0}
+  m_LocalPosition: {x: 0.75, y: -4.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4520119712801504}
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1111057485516436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9759254, y: 11.76, z: 33.5854}
+  m_LocalPosition: {x: 35.68767, y: 15.36, z: -6.3664336}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4208224379195350}
@@ -142,7 +142,9 @@ MonoBehaviour:
   typeWeapons: 
   projectileTypes:
   - {fileID: 1530412109076270, guid: 81ab5166a10faea498a539b008b0b92e, type: 2}
-  damage: 30
-  projectileSpeed: 128000
-  cooldown: 2
+  damage: 200
+  projectileSpeed: 60000
+  cooldown: 12
   onCooldown: 0
+  impairMovement: 0
+  amountImpaired: 0
