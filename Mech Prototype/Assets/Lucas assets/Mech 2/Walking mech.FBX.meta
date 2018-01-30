@@ -1,0 +1,408 @@
+fileFormatVersion: 2
+guid: 85101b4be2640e549afba92de3234d1b
+timeCreated: 1516973144
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Cockpit
+    100004: Cockpit ring
+    100006: Cylinder004
+    100008: Cylinder005
+    100010: Cylinder006
+    100012: Cylinder007
+    100014: Flametrower left
+    100016: Flametrower right
+    100018: Machinegun left
+    100020: Machinegun right
+    100022: Mech
+    100024: MechCollarboneBone0
+    100026: MechCollarboneBone0 1
+    100028: MechLArm1
+    100030: MechLArm2
+    100032: MechLArmCollarbone
+    100034: MechLLeg1
+    100036: MechLLeg2
+    100038: MechLLeg3
+    100040: MechLLegDigit01
+    100042: MechLLegDigit02
+    100044: MechLLegDigit11
+    100046: MechLLegDigit12
+    100048: MechLLegDigit21
+    100050: MechLLegDigit22
+    100052: MechLLegPalm
+    100054: MechLLegPlatform
+    100056: MechPelvis
+    100058: MechRArm1
+    100060: MechRArm2
+    100062: MechRArmCollarbone
+    100064: MechRibcage
+    100066: MechRLeg1
+    100068: MechRLeg2
+    100070: MechRLeg3
+    100072: MechRLegDigit01
+    100074: MechRLegDigit02
+    100076: MechRLegDigit11
+    100078: MechRLegDigit12
+    100080: MechRLegDigit21
+    100082: MechRLegDigit22
+    100084: MechRLegPalm
+    100086: MechRLegPlatform
+    100088: MechSpine
+    100090: Mine
+    100092: Mine launcher left
+    100094: Mine launcher right
+    100096: Mine001
+    100098: Mine_top
+    100100: Mine_top001
+    100102: Object012
+    100104: Object014
+    100106: Object015
+    100108: Object016
+    100110: Railgun left
+    100112: Railgun right
+    100114: Rocket
+    100116: Rocket launcher left
+    100118: Rocket launcher right
+    100120: Rocket001
+    100122: Sphere001
+    100124: Sphere002
+    100126: //RootNode
+    400000: Box001
+    400002: Cockpit
+    400004: Cockpit ring
+    400006: Cylinder004
+    400008: Cylinder005
+    400010: Cylinder006
+    400012: Cylinder007
+    400014: Flametrower left
+    400016: Flametrower right
+    400018: Machinegun left
+    400020: Machinegun right
+    400022: Mech
+    400024: MechCollarboneBone0
+    400026: MechCollarboneBone0 1
+    400028: MechLArm1
+    400030: MechLArm2
+    400032: MechLArmCollarbone
+    400034: MechLLeg1
+    400036: MechLLeg2
+    400038: MechLLeg3
+    400040: MechLLegDigit01
+    400042: MechLLegDigit02
+    400044: MechLLegDigit11
+    400046: MechLLegDigit12
+    400048: MechLLegDigit21
+    400050: MechLLegDigit22
+    400052: MechLLegPalm
+    400054: MechLLegPlatform
+    400056: MechPelvis
+    400058: MechRArm1
+    400060: MechRArm2
+    400062: MechRArmCollarbone
+    400064: MechRibcage
+    400066: MechRLeg1
+    400068: MechRLeg2
+    400070: MechRLeg3
+    400072: MechRLegDigit01
+    400074: MechRLegDigit02
+    400076: MechRLegDigit11
+    400078: MechRLegDigit12
+    400080: MechRLegDigit21
+    400082: MechRLegDigit22
+    400084: MechRLegPalm
+    400086: MechRLegPlatform
+    400088: MechSpine
+    400090: Mine
+    400092: Mine launcher left
+    400094: Mine launcher right
+    400096: Mine001
+    400098: Mine_top
+    400100: Mine_top001
+    400102: Object012
+    400104: Object014
+    400106: Object015
+    400108: Object016
+    400110: Railgun left
+    400112: Railgun right
+    400114: Rocket
+    400116: Rocket launcher left
+    400118: Rocket launcher right
+    400120: Rocket001
+    400122: Sphere001
+    400124: Sphere002
+    400126: //RootNode
+    2100000: No Name
+    2300000: Cockpit
+    2300002: Flametrower left
+    2300004: Flametrower right
+    2300006: Machinegun left
+    2300008: Machinegun right
+    2300010: Mine
+    2300012: Mine launcher left
+    2300014: Mine launcher right
+    2300016: Mine001
+    2300018: Mine_top
+    2300020: Mine_top001
+    2300022: Railgun left
+    2300024: Railgun right
+    2300026: Rocket
+    2300028: Rocket launcher left
+    2300030: Rocket launcher right
+    2300032: Rocket001
+    3300000: Cockpit
+    3300002: Flametrower left
+    3300004: Flametrower right
+    3300006: Machinegun left
+    3300008: Machinegun right
+    3300010: Mine
+    3300012: Mine launcher left
+    3300014: Mine launcher right
+    3300016: Mine001
+    3300018: Mine_top
+    3300020: Mine_top001
+    3300022: Railgun left
+    3300024: Railgun right
+    3300026: Rocket
+    3300028: Rocket launcher left
+    3300030: Rocket launcher right
+    3300032: Rocket001
+    4300000: Box001
+    4300002: Cockpit ring
+    4300004: Cylinder004
+    4300006: Object012
+    4300008: Cylinder005
+    4300010: Object014
+    4300012: Sphere001
+    4300014: Cockpit
+    4300016: Flametrower left
+    4300018: Machinegun left
+    4300020: Railgun left
+    4300022: Flametrower right
+    4300024: Machinegun right
+    4300026: Railgun right
+    4300028: Rocket launcher right
+    4300030: Rocket launcher left
+    4300032: Mine launcher right
+    4300034: Mine launcher left
+    4300036: Mine
+    4300038: Mine_top
+    4300040: Mine001
+    4300042: Mine_top001
+    4300044: Rocket
+    4300046: Rocket001
+    4300048: Cylinder006
+    4300050: Cylinder007
+    4300052: Object015
+    4300054: Object016
+    4300056: Sphere002
+    7400000: Idle
+    7400002: Idle to walking
+    7400004: Walking
+    7400006: Walking to idle
+    9500000: //RootNode
+    13700000: Box001
+    13700002: Cockpit ring
+    13700004: Cylinder004
+    13700006: Cylinder005
+    13700008: Cylinder006
+    13700010: Cylinder007
+    13700012: Object012
+    13700014: Object014
+    13700016: Object015
+    13700018: Object016
+    13700020: Sphere001
+    13700022: Sphere002
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle to walking
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walking
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walking to idle
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
