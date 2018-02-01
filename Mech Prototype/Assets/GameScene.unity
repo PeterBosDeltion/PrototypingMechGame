@@ -940,6 +940,22 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114977103993419532, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+        type: 2}
+      propertyPath: legsPrefab
+      value: 
+      objectReference: {fileID: 1343311564043424, guid: 72080aaf3748a3c4bbf364b7c7daecdd,
+        type: 2}
+    - target: {fileID: 4885754596786006, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114892096689914790, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+        type: 2}
+      propertyPath: bodyPrefab
+      value: 
+      objectReference: {fileID: 1043197272390916, guid: e7b401b907bc5494dad36182f0506967,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
   m_IsPrefabParent: 0

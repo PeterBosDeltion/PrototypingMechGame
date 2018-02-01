@@ -63,6 +63,12 @@ public class Player : MonoBehaviour {
         {
             armsParent.transform.localRotation = armsStartRot;
         }
+
+        if(hp <= 0)
+        {
+            Time.timeScale = 0;
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate () {
