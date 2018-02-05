@@ -26,7 +26,6 @@ public class MechCustomizationUI : MonoBehaviour {
 
 	void Start () 
 	{
-		Time.timeScale = 0;
 		leftArm = leftArms[0];
 		rightArm = rightArms[0];
 		mechBody = bodys[0];
@@ -182,20 +181,18 @@ public class MechCustomizationUI : MonoBehaviour {
 	{
 		if(firstOneDone == true)
 		{
-			playerTwo.GetComponent<Player>().myLeftArm = leftArm;
-			playerTwo.GetComponent<Player>().myRightArm = rightArm;
-			playerTwo.GetComponent<Player>().myBody = mechBody;
-			playerTwo.GetComponent<Player>().myLegs = mechLegs;
-			mechCustomizationPannel.SetActive(false);
-			Time.timeScale = 1;
+			playerTwo.transform.GetChild(0).GetComponent<Legholder>().legsPrefab = mechLegs;
+			playerTwo.transform.GetChild(2).GetComponent<BodyHolder>().bodyPrefab = mechBody;
+			playerTwo.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Weaponholder>().weaponObject = leftArm;
+			playerTwo.transform.GetChild(2).GetChild(0).GetChild(1).GetComponent<Weaponholder>().weaponObject = rightArm;
 		}
 		else
 		{
 			firstOneDone = true;
-			playerOne.GetComponent<Player>().myLeftArm = leftArm;
-			playerOne.GetComponent<Player>().myRightArm = rightArm;
-			playerOne.GetComponent<Player>().myBody = mechBody;
-			playerOne.GetComponent<Player>().myLegs = mechLegs;
+			playerOne.transform.GetChild(0).GetComponent<Legholder>().legsPrefab = mechLegs;
+			playerOne.transform.GetChild(2).GetComponent<BodyHolder>().bodyPrefab = mechBody;
+			playerOne.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Weaponholder>().weaponObject = leftArm;
+			playerOne.transform.GetChild(2).GetChild(0).GetChild(1).GetComponent<Weaponholder>().weaponObject = rightArm;
 		}
 	}
 }
