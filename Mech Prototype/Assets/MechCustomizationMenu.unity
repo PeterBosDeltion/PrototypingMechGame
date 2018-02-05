@@ -2425,6 +2425,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b5238254b65b9e4d95c02274dfe9035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLeftArm: 0
+  currentRightArm: 0
+  currentMechBody: 0
+  currentMechLegs: 0
   mechCustomizationPannel: {fileID: 643768330}
   firstOneDone: 0
   playerOne: {fileID: 0}
