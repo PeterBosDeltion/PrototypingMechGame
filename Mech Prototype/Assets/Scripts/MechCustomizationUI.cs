@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class MechCustomizationUI : MonoBehaviour {
 
+	public bool firstOneDone = false;
+	public GameObject playerOne;
+	public GameObject playerTwo;
 	public Text leftArmText;
 	public Text rightArmText;
 	public Text mechBodyText;
@@ -15,7 +18,8 @@ public class MechCustomizationUI : MonoBehaviour {
 	public GameObject mechBody;
 	public GameObject mechLegs;
 
-	public List<GameObject> arms = new List<GameObject>();
+	public List<GameObject> leftArms = new List<GameObject>();
+	public List<GameObject> rightArms = new List<GameObject>();
 	public List<GameObject> bodys = new List<GameObject>();
 	public List<GameObject> legs = new List<GameObject>();
 
@@ -33,15 +37,15 @@ public class MechCustomizationUI : MonoBehaviour {
 		int e = 0;
 		if(i == 0)
 		{
-			if(e != arms.Count - 1)
+			if(e != leftArms.Count - 1)
 			{
 				e += 1;
-				leftArm = arms[e];
+				leftArm = leftArms[e];
 			}
 			else
 			{
 				e = 0;
-				leftArm = arms[e];
+				leftArm = leftArms[e];
 			}
 		}
 		else if(i == 1)
@@ -49,12 +53,12 @@ public class MechCustomizationUI : MonoBehaviour {
 			if(e != 0)
 			{
 				e -= 1;
-				leftArm = arms[e];
+				leftArm = leftArms[e];
 			}
 			else
 			{
-				e = arms.Count - 1;
-				leftArm = arms[e];
+				e = leftArms.Count - 1;
+				leftArm = leftArms[e];
 			}
 		}
 	}
@@ -63,15 +67,15 @@ public class MechCustomizationUI : MonoBehaviour {
 		int e = 0;
 		if(i == 0)
 		{
-			if(e != arms.Count - 1)
+			if(e != rightArms.Count - 1)
 			{
 				e += 1;
-				rightArm = arms[e];
+				rightArm = rightArms[e];
 			}
 			else
 			{
 				e = 0;
-				rightArm = arms[e];
+				rightArm = rightArms[e];
 			}
 		}
 		else if(i == 1)
@@ -79,12 +83,12 @@ public class MechCustomizationUI : MonoBehaviour {
 			if(e != 0)
 			{
 				e -= 1;
-				rightArm = arms[e];
+				rightArm = rightArms[e];
 			}
 			else
 			{
-				e = arms.Count - 1;
-				rightArm = arms[e];
+				e = rightArms.Count - 1;
+				rightArm = rightArms[e];
 			}
 		}
 	}
@@ -151,6 +155,20 @@ public class MechCustomizationUI : MonoBehaviour {
 
 	public void EnterCurrentSetup()
 	{
-		
+		if(firstOneDone == true)
+		{
+			playerTwo.GetComponent<Player>().myLeftArm = leftArm;
+			playerTwo.GetComponent<Player>().myRightArm = rightArm;
+			playerTwo.GetComponent<Player>().myBody = mechBody;
+			playerTwo.GetComponent<Player>().myLegs = mechLegs;
+		}
+		else
+		{
+			firstOneDone = true;
+			playerOne.GetComponent<Player>().myLeftArm = leftArm;
+			playerOne.GetComponent<Player>().myRightArm = rightArm;
+			playerOne.GetComponent<Player>().myBody = mechBody;
+			playerOne.GetComponent<Player>().myLegs = mechLegs;
+		}
 	}
 }

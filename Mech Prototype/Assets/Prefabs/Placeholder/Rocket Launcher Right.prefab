@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23735317286856734}
   - component: {fileID: 114637912847758254}
   m_Layer: 0
-  m_Name: Rocket Launcher 1
+  m_Name: Rocket Launcher Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

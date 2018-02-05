@@ -837,6 +837,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b5238254b65b9e4d95c02274dfe9035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstOneDone: 0
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
   leftArmText: {fileID: 937871910}
   rightArmText: {fileID: 1853165858}
   mechBodyText: {fileID: 2097222749}
@@ -845,9 +848,23 @@ MonoBehaviour:
   rightArm: {fileID: 0}
   mechBody: {fileID: 0}
   mechLegs: {fileID: 0}
-  arms: []
-  bodys: []
-  legs: []
+  leftArms:
+  - {fileID: 1695342340911720, guid: 656e5b2eebaf2d34499920df5d77a417, type: 2}
+  - {fileID: 1214165686629478, guid: 2c0c2ff50f3194e4dbc48a1896522120, type: 2}
+  - {fileID: 1651916867343852, guid: 598c80cc21222974987114702be26c7e, type: 2}
+  - {fileID: 1321680425317188, guid: 1a5b5e178b606a141842fa5adc293b85, type: 2}
+  - {fileID: 1776967227455282, guid: 94a9a4dec2f9f8740b96b9fe210e6a8b, type: 2}
+  rightArms:
+  - {fileID: 1302926154113268, guid: 1b7bea52abe95124798a8e63ddf5b821, type: 2}
+  - {fileID: 1380644867400850, guid: d2cfa88f5d5f1b84fac3ca35e05be894, type: 2}
+  - {fileID: 1853771110098056, guid: ffcb8f2e7284de749a84de30f68ab1b3, type: 2}
+  - {fileID: 1187008627495594, guid: d06a97408fe20a443bdd45dcbadb49c3, type: 2}
+  - {fileID: 1010891918915870, guid: c320ebb26debae2488f052132cefc9df, type: 2}
+  bodys:
+  - {fileID: 1362995433899424, guid: 133e46cdad590f445b8a393db674dbda, type: 2}
+  legs:
+  - {fileID: 1602090597454286, guid: 59dd6dc2c0beee2488573be786375746, type: 2}
+  - {fileID: 1667102728860222, guid: dae07ada016c89a4cae20809811cc924, type: 2}
 --- !u!1 &146837856
 GameObject:
   m_ObjectHideFlags: 0
