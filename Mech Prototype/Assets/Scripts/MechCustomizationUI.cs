@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MechCustomizationUI : MonoBehaviour {
 
+	public int currentLeftArm;
+	public int currentRightArm;
+	public int currentMechBody;
+	public int currentMechLegs; 
+
 	public static GameObject thisObject;
 	public GameObject mechCustomizationPannel;
 	public bool firstOneDone = false;
@@ -70,249 +75,245 @@ public class MechCustomizationUI : MonoBehaviour {
 
 	public void LeftArm(int i)
 	{
-		int e = 0;
 		if(i == 0)
 		{
-			if(e != leftArms.Count - 1)
+			if(currentLeftArm != leftArms.Count - 1)
 			{
-				e += 1;
-				leftArmText.text = leftArms[e].name;
+				currentLeftArm += 1;
+				leftArmText.text = leftArms[currentLeftArm].name;
 				if(firstOneDone == false)
 				{
-					leftArmP1 = leftArms[e];
+					leftArmP1 = leftArms[currentLeftArm];
 				}
 				else
 				{
-					leftArmP2 = leftArms[e];
+					leftArmP2 = leftArms[currentLeftArm];
 				}
 			}
 			else
 			{
-				e = 0;
-				leftArmText.text = leftArms[e].name;
+				currentLeftArm = 0;
+				leftArmText.text = leftArms[currentLeftArm].name;
 				if(firstOneDone == false)
 				{
-					leftArmP1 = leftArms[e];
+					leftArmP1 = leftArms[currentLeftArm];
 				}
 				else
 				{
-					leftArmP2 = leftArms[e];
+					leftArmP2 = leftArms[currentLeftArm];
 				}
 			}
 		}
 
 		else if(i == 1)
 		{
-			if(e != 0)
+			if(currentLeftArm != 0)
 			{
-				e -= 1;
-				leftArmText.text = leftArms[e].name;
+				currentLeftArm -= 1;
+				leftArmText.text = leftArms[currentLeftArm].name;
 				if(firstOneDone == false)
 				{
-					leftArmP1 = leftArms[e];
+					leftArmP1 = leftArms[currentLeftArm];
 				}
 				else
 				{
-					leftArmP2 = leftArms[e];
+					leftArmP2 = leftArms[currentLeftArm];
 				}
 			}
 			else
 			{
-				e = leftArms.Count - 1;
-				leftArmText.text = leftArms[e].name;
+				currentLeftArm = leftArms.Count - 1;
+				leftArmText.text = leftArms[currentLeftArm].name;
 				if(firstOneDone == false)
 				{
-					leftArmP1 = leftArms[e];
+					leftArmP1 = leftArms[currentLeftArm];
 				}
 				else
 				{
-					leftArmP2 = leftArms[e];
+					leftArmP2 = leftArms[currentLeftArm];
 				}
 			}
 		}
 	}
 	public void RightArm(int i)
 	{
-		int e = 0;
 		if(i == 0)
 		{
-			if(e != rightArms.Count - 1)
+			if(currentRightArm != rightArms.Count - 1)
 			{
-				e += 1;
-				rightArmText.text = rightArms[e].name;
+				currentRightArm += 1;
+				rightArmText.text = rightArms[currentRightArm].name;
 				if(firstOneDone == false)
 				{
-					rightArmP1 = rightArms[e];
+					rightArmP1 = rightArms[currentRightArm];
 				}
 				else
 				{
-					rightArmP2 = rightArms[e];
+					rightArmP2 = rightArms[currentRightArm];
 				}
 			}
 			else
 			{
-				e = 0;
-				rightArmText.text = rightArms[e].name;
+				currentRightArm = 0;
+				rightArmText.text = rightArms[currentRightArm].name;
 				if(firstOneDone == false)
 				{
-					rightArmP1 = rightArms[e];
+					rightArmP1 = rightArms[currentRightArm];
 				}
 				else
 				{
-					rightArmP2 = rightArms[e];
+					rightArmP2 = rightArms[currentRightArm];
 				}
 			}
 		}
 		else if(i == 1)
 		{
-			if(e != 0)
+			if(currentRightArm != 0)
 			{
-				e -= 1;
-				rightArmText.text = rightArms[e].name;
+				currentRightArm -= 1;
+				rightArmText.text = rightArms[currentRightArm].name;
 				if(firstOneDone == false)
 				{
-					rightArmP1 = rightArms[e];
+					rightArmP1 = rightArms[currentRightArm];
 				}
 				else
 				{
-					rightArmP2 = rightArms[e];
+					rightArmP2 = rightArms[currentRightArm];
 				}
 			}
 			else
 			{
-				e = rightArms.Count - 1;
-				rightArmText.text = rightArms[e].name;
+				currentRightArm = rightArms.Count - 1;
+				rightArmText.text = rightArms[currentRightArm].name;
 				if(firstOneDone == false)
 				{
-					rightArmP1 = rightArms[e];
+					rightArmP1 = rightArms[currentRightArm];
 				}
 				else
 				{
-					rightArmP2 = rightArms[e];
+					rightArmP2 = rightArms[currentRightArm];
 				}
 			}
 		}
 	}
 	public void MechBody(int i)
 	{
-		int e = 0;
 		if(i == 0)
 		{
-			if(e != bodys.Count - 1)
+			if(currentMechBody != bodys.Count - 1)
 			{
-				e += 1;
-				mechBodyText.text = bodys[e].name;
+				currentMechBody += 1;
+				mechBodyText.text = bodys[currentMechBody].name;
 				if(firstOneDone == false)
 				{
-					mechBodyP1 = bodys[e];
+					mechBodyP1 = bodys[currentMechBody];
 				}
 				else
 				{
-					mechBodyP2 = bodys[e];
+					mechBodyP2 = bodys[currentMechBody];
 				}
 			}
 			else
 			{
-				e = 0;
-				mechBodyText.text = bodys[e].name;
+				currentMechBody = 0;
+				mechBodyText.text = bodys[currentMechBody].name;
 				if(firstOneDone == false)
 				{
-					mechBodyP1 = bodys[e];
+					mechBodyP1 = bodys[currentMechBody];
 				}
 				else
 				{
-					mechBodyP2 = bodys[e];
+					mechBodyP2 = bodys[currentMechBody];
 				}
 			}
 		}
 		else if(i == 1)
 		{
-			if(e != 0)
+			if(currentMechBody != 0)
 			{
-				e -= 1;
-				mechBodyText.text = bodys[e].name;
+				currentMechBody -= 1;
+				mechBodyText.text = bodys[currentMechBody].name;
 				if(firstOneDone == false)
 				{
-					mechBodyP1 = bodys[e];
+					mechBodyP1 = bodys[currentMechBody];
 				}
 				else
 				{
-					mechBodyP2 = bodys[e];
+					mechBodyP2 = bodys[currentMechBody];
 				}
 			}
 			else
 			{
-				e = bodys.Count - 1;
-				mechBodyText.text = bodys[e].name;
+				currentMechBody = bodys.Count - 1;
+				mechBodyText.text = bodys[currentMechBody].name;
 				if(firstOneDone == false)
 				{
-					mechBodyP1 = bodys[e];
+					mechBodyP1 = bodys[currentMechBody];
 				}
 				else
 				{
-					mechBodyP2 = bodys[e];
+					mechBodyP2 = bodys[currentMechBody];
 				}
 			}
 		}
 	}
 	public void MechLegs(int i)
 	{
-		int e = 0;
 		if(i == 0)
 		{
-			if(e != legs.Count - 1)
+			if(currentMechLegs != legs.Count - 1)
 			{
-				e += 1;
-				mechLegsText.text = legs[e].name;
+				currentMechLegs += 1;
+				mechLegsText.text = legs[currentMechLegs].name;
 				if(firstOneDone == false)
 				{
-					mechLegsP1 = legs[e];
+					mechLegsP1 = legs[currentMechLegs];
 				}
 				else
 				{
-					mechLegsP2 = legs[e];
+					mechLegsP2 = legs[currentMechLegs];
 				}
 			}
 			else
 			{
-				e = 0;
-				mechLegsText.text = legs[e].name;
+				currentMechLegs = 0;
+				mechLegsText.text = legs[currentMechLegs].name;
 				if(firstOneDone == false)
 				{
-					mechLegsP1 = legs[e];
+					mechLegsP1 = legs[currentMechLegs];
 				}
 				else
 				{
-					mechLegsP2 = legs[e];
+					mechLegsP2 = legs[currentMechLegs];
 				}
 			}
 		}
 		else if(i == 1)
 		{
-			if(e != 0)
+			if(currentMechLegs != 0)
 			{
-				e -= 1;
-				mechLegsText.text = legs[e].name;
+				currentMechLegs -= 1;
+				mechLegsText.text = legs[currentMechLegs].name;
 				if(firstOneDone == false)
 				{
-					mechLegsP1 = legs[e];
+					mechLegsP1 = legs[currentMechLegs];
 				}
 				else
 				{
-					mechLegsP2 = legs[e];
+					mechLegsP2 = legs[currentMechLegs];
 				}
 			}
 			else
 			{
-				e = bodys.Count - 1;
-				mechLegsText.text = legs[e].name;
+				currentMechLegs = bodys.Count - 1;
+				mechLegsText.text = legs[currentMechLegs].name;
 				if(firstOneDone == false)
 				{
-					mechLegsP1 = legs[e];
+					mechLegsP1 = legs[currentMechLegs];
 				}
 				else
 				{
-					mechLegsP2 = legs[e];
+					mechLegsP2 = legs[currentMechLegs];
 				}
 			}
 		}
@@ -336,10 +337,8 @@ public class MechCustomizationUI : MonoBehaviour {
 
 	public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		print("ok");
 		if (scene.buildIndex == 1)
 		{
-			print("roger");
 			GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 			if(players[0].GetComponent<Player>().playerNumber == 1)
 			{
