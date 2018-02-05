@@ -1,0 +1,236 @@
+fileFormatVersion: 2
+guid: de542a6d02c4ab84c920ddf45107a579
+timeCreated: 1517859988
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Cockpit ring
+    100004: Cylinder004
+    100006: Cylinder005
+    100008: Cylinder006
+    100010: Cylinder007
+    100012: Mech
+    100014: MechCollarboneBone0
+    100016: MechCollarboneBone0 1
+    100018: MechLArm1
+    100020: MechLArm2
+    100022: MechLArmCollarbone
+    100024: MechLLeg1
+    100026: MechLLeg2
+    100028: MechLLeg3
+    100030: MechLLegDigit01
+    100032: MechLLegDigit02
+    100034: MechLLegDigit11
+    100036: MechLLegDigit12
+    100038: MechLLegDigit21
+    100040: MechLLegDigit22
+    100042: MechLLegPalm
+    100044: MechLLegPlatform
+    100046: MechPelvis
+    100048: MechRArm1
+    100050: MechRArm2
+    100052: MechRArmCollarbone
+    100054: MechRibcage
+    100056: MechRLeg1
+    100058: MechRLeg2
+    100060: MechRLeg3
+    100062: MechRLegDigit01
+    100064: MechRLegDigit02
+    100066: MechRLegDigit11
+    100068: MechRLegDigit12
+    100070: MechRLegDigit21
+    100072: MechRLegDigit22
+    100074: MechRLegPalm
+    100076: MechRLegPlatform
+    100078: MechSpine
+    100080: Object012
+    100082: Object014
+    100084: Object015
+    100086: Object016
+    100088: Sphere001
+    100090: Sphere002
+    100092: //RootNode
+    400000: Box001
+    400002: Cockpit ring
+    400004: Cylinder004
+    400006: Cylinder005
+    400008: Cylinder006
+    400010: Cylinder007
+    400012: Mech
+    400014: MechCollarboneBone0
+    400016: MechCollarboneBone0 1
+    400018: MechLArm1
+    400020: MechLArm2
+    400022: MechLArmCollarbone
+    400024: MechLLeg1
+    400026: MechLLeg2
+    400028: MechLLeg3
+    400030: MechLLegDigit01
+    400032: MechLLegDigit02
+    400034: MechLLegDigit11
+    400036: MechLLegDigit12
+    400038: MechLLegDigit21
+    400040: MechLLegDigit22
+    400042: MechLLegPalm
+    400044: MechLLegPlatform
+    400046: MechPelvis
+    400048: MechRArm1
+    400050: MechRArm2
+    400052: MechRArmCollarbone
+    400054: MechRibcage
+    400056: MechRLeg1
+    400058: MechRLeg2
+    400060: MechRLeg3
+    400062: MechRLegDigit01
+    400064: MechRLegDigit02
+    400066: MechRLegDigit11
+    400068: MechRLegDigit12
+    400070: MechRLegDigit21
+    400072: MechRLegDigit22
+    400074: MechRLegPalm
+    400076: MechRLegPlatform
+    400078: MechSpine
+    400080: Object012
+    400082: Object014
+    400084: Object015
+    400086: Object016
+    400088: Sphere001
+    400090: Sphere002
+    400092: //RootNode
+    2100000: No Name
+    4300000: Cockpit ring
+    4300002: Box001
+    4300004: Cylinder004
+    4300006: Cylinder005
+    4300008: Cylinder006
+    4300010: Cylinder007
+    4300012: Object012
+    4300014: Object014
+    4300016: Object015
+    4300018: Object016
+    4300020: Sphere001
+    4300022: Sphere002
+    7400000: Walking
+    9500000: //RootNode
+    13700000: Box001
+    13700002: Cockpit ring
+    13700004: Cylinder004
+    13700006: Cylinder005
+    13700008: Cylinder006
+    13700010: Cylinder007
+    13700012: Object012
+    13700014: Object014
+    13700016: Object015
+    13700018: Object016
+    13700020: Sphere001
+    13700022: Sphere002
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
