@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MechCustomizationUI : MonoBehaviour {
 
+	public GameObject mechCustomizationPannel;
 	public bool firstOneDone = false;
 	public GameObject playerOne;
 	public GameObject playerTwo;
@@ -26,6 +27,14 @@ public class MechCustomizationUI : MonoBehaviour {
 	void Start () 
 	{
 		Time.timeScale = 0;
+		leftArm = leftArms[0];
+		rightArm = rightArms[0];
+		mechBody = bodys[0];
+		mechLegs = legs[0];
+		leftArmText.text = leftArm.name;
+		rightArmText.text = rightArm.name;
+		mechBodyText.text = mechBody.name;
+		mechLegsText.text = mechLegs.name;
 	}
 	
 	void Update () {
@@ -41,11 +50,13 @@ public class MechCustomizationUI : MonoBehaviour {
 			{
 				e += 1;
 				leftArm = leftArms[e];
+				leftArmText.text = leftArm.name;
 			}
 			else
 			{
 				e = 0;
 				leftArm = leftArms[e];
+				leftArmText.text = leftArm.name;
 			}
 		}
 		else if(i == 1)
@@ -54,11 +65,13 @@ public class MechCustomizationUI : MonoBehaviour {
 			{
 				e -= 1;
 				leftArm = leftArms[e];
+				leftArmText.text = leftArm.name;
 			}
 			else
 			{
 				e = leftArms.Count - 1;
 				leftArm = leftArms[e];
+				leftArmText.text = leftArm.name;
 			}
 		}
 	}
@@ -71,11 +84,13 @@ public class MechCustomizationUI : MonoBehaviour {
 			{
 				e += 1;
 				rightArm = rightArms[e];
+				rightArmText.text = rightArm.name;
 			}
 			else
 			{
 				e = 0;
 				rightArm = rightArms[e];
+				rightArmText.text = rightArm.name;
 			}
 		}
 		else if(i == 1)
@@ -84,11 +99,13 @@ public class MechCustomizationUI : MonoBehaviour {
 			{
 				e -= 1;
 				rightArm = rightArms[e];
+				rightArmText.text = rightArm.name;
 			}
 			else
 			{
 				e = rightArms.Count - 1;
 				rightArm = rightArms[e];
+				rightArmText.text = rightArm.name;
 			}
 		}
 	}
@@ -101,11 +118,13 @@ public class MechCustomizationUI : MonoBehaviour {
 			{
 				e += 1;
 				mechBody = bodys[e];
+				mechBodyText.text = mechBody.name;
 			}
 			else
 			{
 				e = 0;
 				mechBody = bodys[e];
+				mechBodyText.text = mechBody.name;
 			}
 		}
 		else if(i == 1)
@@ -114,11 +133,13 @@ public class MechCustomizationUI : MonoBehaviour {
 			{
 				e -= 1;
 				mechBody = bodys[e];
+				mechBodyText.text = mechBody.name;
 			}
 			else
 			{
 				e = bodys.Count - 1;
 				mechBody = bodys[e];
+				mechBodyText.text = mechBody.name;
 			}
 		}
 	}
@@ -131,11 +152,13 @@ public class MechCustomizationUI : MonoBehaviour {
 			{
 				e += 1;
 				mechLegs = legs[e];
+				mechLegsText.text = mechLegs.name;
 			}
 			else
 			{
 				e = 0;
 				mechLegs = legs[e];
+				mechLegsText.text = mechLegs.name;
 			}
 		}
 		else if(i == 1)
@@ -144,11 +167,13 @@ public class MechCustomizationUI : MonoBehaviour {
 			{
 				e -= 1;
 				mechLegs = legs[e];
+				mechLegsText.text = mechLegs.name;
 			}
 			else
 			{
 				e = bodys.Count - 1;
 				mechLegs = legs[e];
+				mechLegsText.text = mechLegs.name;
 			}
 		}
 	}
@@ -161,6 +186,8 @@ public class MechCustomizationUI : MonoBehaviour {
 			playerTwo.GetComponent<Player>().myRightArm = rightArm;
 			playerTwo.GetComponent<Player>().myBody = mechBody;
 			playerTwo.GetComponent<Player>().myLegs = mechLegs;
+			mechCustomizationPannel.SetActive(false);
+			Time.timeScale = 1;
 		}
 		else
 		{

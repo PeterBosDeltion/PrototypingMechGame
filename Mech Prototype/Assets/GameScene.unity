@@ -837,9 +837,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b5238254b65b9e4d95c02274dfe9035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mechCustomizationPannel: {fileID: 88315940}
   firstOneDone: 0
-  playerOne: {fileID: 0}
-  playerTwo: {fileID: 0}
+  playerOne: {fileID: 659786071}
+  playerTwo: {fileID: 1710517335}
   leftArmText: {fileID: 937871910}
   rightArmText: {fileID: 1853165858}
   mechBodyText: {fileID: 2097222749}
@@ -1380,6 +1381,10 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071534278146534, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
+      propertyPath: m_Name
+      value: TestMechPlayer2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
@@ -2714,7 +2719,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1071534278146534, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
       propertyPath: m_Name
-      value: TestMech (1)
+      value: TestMechPlayer1
       objectReference: {fileID: 0}
     - target: {fileID: 114136090318707796, guid: 6d00ddcf41273ef4ea7bc155de258c68,
         type: 2}
@@ -2740,8 +2745,7 @@ Prefab:
         type: 2}
       propertyPath: bodyPrefab
       value: 
-      objectReference: {fileID: 1043197272390916, guid: e7b401b907bc5494dad36182f0506967,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114245592560188188, guid: 6d00ddcf41273ef4ea7bc155de258c68,
         type: 2}
       propertyPath: hp
@@ -2766,8 +2770,7 @@ Prefab:
         type: 2}
       propertyPath: weaponObject
       value: 
-      objectReference: {fileID: 1111057485516436, guid: 871851e97c4ee7d458e55dc7d3835755,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 1071534278146534, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -2781,6 +2784,11 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114977103993419532, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+        type: 2}
+      propertyPath: legsPrefab
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d00ddcf41273ef4ea7bc155de258c68, type: 2}
@@ -3615,6 +3623,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651348611}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &659786071 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1071534278146534, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+    type: 2}
+  m_PrefabInternal: {fileID: 501649412}
 --- !u!1 &670656348
 GameObject:
   m_ObjectHideFlags: 0
@@ -8997,6 +9010,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1656217786}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1710517335 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1071534278146534, guid: 6d00ddcf41273ef4ea7bc155de258c68,
+    type: 2}
+  m_PrefabInternal: {fileID: 229074181}
 --- !u!1 &1710737197
 GameObject:
   m_ObjectHideFlags: 0
