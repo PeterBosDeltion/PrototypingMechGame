@@ -327,6 +327,10 @@ public class MechCustomizationUI : MonoBehaviour {
 		else
 		{
 			firstOneDone = true;
+			mechBodyP2 = mechBodyP1;
+			mechLegsP2 = mechLegsP1;
+			leftArmP2 = leftArmP1;
+			rightArmP2 = rightArmP1;
 		}
 	}
 

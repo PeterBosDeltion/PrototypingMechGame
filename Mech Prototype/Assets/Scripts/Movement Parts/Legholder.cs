@@ -20,7 +20,7 @@ public class Legholder : MonoBehaviour {
     {
         legsObject = Instantiate(legsPrefab, transform.position, Quaternion.identity);
         legsObject.transform.SetParent(transform);
-        legsObject.transform.localRotation = new Quaternion(-180, 0, 0, 0);
+        legsObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
         legsObject.transform.localPosition = Vector3.zero;
         move = legsObject.GetComponent<MovePart>();
         move.rb = GetComponentInParent<Rigidbody>();
