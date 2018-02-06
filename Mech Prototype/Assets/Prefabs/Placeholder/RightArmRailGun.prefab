@@ -177,7 +177,7 @@ MonoBehaviour:
   projectileTypes:
   - {fileID: 1530412109076270, guid: 81ab5166a10faea498a539b008b0b92e, type: 2}
   damage: 250
-  projectileSpeed: 26000
+  projectileSpeed: 260000
   cooldown: 15
   onCooldown: 0
   impairMovement: 0
