@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 33760392075817924}
   - component: {fileID: 23344819626122658}
   - component: {fileID: 95867226985444822}
-  - component: {fileID: 114723807863298376}
   m_Layer: 0
   m_Name: RailGunRightArm
   m_TagString: Untagged
@@ -95,7 +94,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1008476084155460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.432175, y: 9.9, z: 27.363636}
+  m_LocalPosition: {x: 788.21844, y: 472.65427, z: -754.80414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4063999118903862}
@@ -172,8 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   armPrefab: {fileID: 1008476084155460}
-  bulletSpawnPos: {fileID: 1872830875320846, guid: 1f08cbf76e06c1746bb5d1e22f039e69,
-    type: 2}
+  bulletSpawnPos: {fileID: 1610532547449592}
   myCooler: {fileID: 0}
   typeWeapons: 
   projectileTypes:
@@ -181,28 +179,6 @@ MonoBehaviour:
   damage: 250
   projectileSpeed: 26000
   cooldown: 15
-  onCooldown: 0
-  impairMovement: 0
-  amountImpaired: 0
---- !u!114 &114723807863298376
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1055495823696886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d74f9c2f53291469b191bada1956a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  armPrefab: {fileID: 0}
-  bulletSpawnPos: {fileID: 0}
-  myCooler: {fileID: 0}
-  typeWeapons: 
-  projectileTypes: []
-  damage: 0
-  projectileSpeed: 0
-  cooldown: 0
   onCooldown: 0
   impairMovement: 0
   amountImpaired: 0
