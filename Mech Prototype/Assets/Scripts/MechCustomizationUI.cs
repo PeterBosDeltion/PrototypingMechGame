@@ -305,7 +305,7 @@ public class MechCustomizationUI : MonoBehaviour {
 			}
 			else
 			{
-				currentMechLegs = bodys.Count - 1;
+				currentMechLegs = legs.Count - 1;
 				mechLegsText.text = legs[currentMechLegs].name;
 				if(firstOneDone == false)
 				{
