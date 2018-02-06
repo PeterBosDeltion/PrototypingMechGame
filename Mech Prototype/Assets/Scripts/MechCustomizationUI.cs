@@ -20,6 +20,7 @@ public class MechCustomizationUI : MonoBehaviour {
 	public Text rightArmText;
 	public Text mechBodyText;
 	public Text mechLegsText;
+	public Text currentPlayer;
 
 	public GameObject leftArmP1;
 	public GameObject rightArmP1;
@@ -49,6 +50,7 @@ public class MechCustomizationUI : MonoBehaviour {
 
 		DontDestroyOnLoad(this.gameObject);
 
+		currentPlayer.text = "Player 1";
 		leftArmP1 = leftArms[0];
 		rightArmP1 = rightArms[0];
 		mechBodyP1 = bodys[0];
@@ -332,6 +334,7 @@ public class MechCustomizationUI : MonoBehaviour {
 			mechLegsP2 = mechLegsP1;
 			leftArmP2 = leftArmP1;
 			rightArmP2 = rightArmP1;
+			currentPlayer.text = "Player 2";
 		}
 	}
 
